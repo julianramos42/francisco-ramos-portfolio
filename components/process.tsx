@@ -52,6 +52,9 @@ export default function Features() {
       text: 'Una vez completada la edición, procedo a la revisión y retroalimentación, donde repaso el video internamente y realizo ajustes según sea necesario. Luego, solicito una opinión y si es necesario realizo los cambios solicitados.',
     },
     {
+
+    },
+    {
       number: 7,
       title: 'Entrega',
       text: 'Finalmente, selecciono el formato de archivo y la configuración de exportación adecuados para el proyecto. Exporto el video en la resolución y calidad deseadas, y procedo a la entrega final.',
@@ -76,18 +79,18 @@ export default function Features() {
 
           {/* Section content */}
           <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 md:max-w-2xl lg:max-w-none">
-
             {
               items &&
               items.map((item, i) => (
-                <div key={i} className="relative flex flex-col items-center p-6 pt-0 bg-white rounded shadow-xl border border-black" data-aos="fade-right">
+                item.number ?
+                  <div key={i} className="relative flex flex-col items-center p-6 pt-0 bg-white rounded shadow-xl border border-black" data-aos="fade-right">
                     <p className='top-0 bg-black text-white px-5 py-3 rounded-full mb-3' style={{ marginTop: '-15px' }}>{item.number}</p>
                     <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">{item.title}</h4>
                     <p className="text-gray-600 text-center">{item.text}</p>
                   </div>
+                  : <div key={i} className="relative" data-aos="fade-right"></div>
               ))
             }
-
           </div>
 
         </div>

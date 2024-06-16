@@ -5,7 +5,7 @@ import instagram from '../public/images/instagram.png'
 
 export default function contact() {
     return (
-        <section className="relative" id="contactSection">       
+        <section className="relative pb-24" id="contactSection">       
 
             {/* Section header */}
             <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">

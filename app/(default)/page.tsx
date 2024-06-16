@@ -1,8 +1,8 @@
 import Hero from '@/components/hero'
 import Experience from '@/components/experience'
-import Features from '@/components/features'
-import FeaturesBlocks from '@/components/features-blocks'
-import Testimonials from '@/components/testimonials'
+import Process from '@/components/process'
+import ProcessBlocks from '@/components/process-blocks'
+import AboutMe from '@/components/aboutMe'
 import Contact from '@/components/contact'
 
 export default function Home() {
@@ -10,9 +10,9 @@ export default function Home() {
     <>
       <Hero />
       <Experience/>
-      <Features />
-      <FeaturesBlocks />
-      <Testimonials />
+      <Process />
+      <ProcessBlocks />
+      <AboutMe />
       <Contact/>
     </>
   )

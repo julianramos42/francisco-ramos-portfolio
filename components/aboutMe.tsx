@@ -52,8 +52,8 @@ export default function Testimonials() {
               items &&
               items.map((item, i) => (
                 <div className="mb-10 ml-12 relative" key={i}>
-                  <div className="absolute left-0 top-0 flex items-center justify-center w-8 h-8 bg-gray-900 text-white rounded-full" style={{marginLeft: "-47px"}}>{item.number}</div>
-                  <div className="p-4 bg-white border border-gray-200 rounded shadow-lg">
+                  <div className="absolute left-0 top-0 flex items-center justify-center w-8 h-8 bg-gray-900 text-white rounded-full" style={{ marginLeft: "-47px" }}>{item.number}</div>
+                  <div className="p-4 bg-white border border-gray-400 rounded shadow-lg">
                     <p className="text-lg font-bold mb-2">{item.year}</p>
                     <ul className="list-disc list-inside">
                       {

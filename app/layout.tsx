@@ -1,6 +1,7 @@
 import './css/style.css'
 
 import { Inter } from 'next/font/google'
+import { Viewport } from 'next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -8,11 +9,15 @@ const inter = Inter({
   display: 'swap'
 })
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1
+}
+
 export const metadata = {
   title: 'Francisco Ramos',
   description: 'Francisco Ramos Portfolio - Una muestra de mis proyectos y habilidades en la edición de video.',
   keywords: 'Francisco Ramos, portfolio, edicion, video, proyectos, habilidades, edicion de video',
-  viewport: 'width=device-width, initial-scale=1.0',
   robots: 'index, follow',
   openGraph: {
     title: 'Francisco Ramos Portfolio',

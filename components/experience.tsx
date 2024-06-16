@@ -2,6 +2,11 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import pabloFernandezFoto from '@/public/images/clients/Pablo.webp'
 //
 import santiMalanoFoto from '@/public/images/clients/Santi_Malano.webp'
@@ -46,6 +51,45 @@ export default function experience() {
     const santiMalanoVideos = ['/videos/clients/santi_malano/sm1.mp4', '/videos/clients/santi_malano/sm2.mp4', '/videos/clients/santi_malano/sm3.mp4', '/videos/clients/santi_malano/sm4.mp4', '/videos/clients/santi_malano/sm5.mp4']
     const saltenoVideos = ['/videos/clients/salteno/s1.mp4', '/videos/clients/salteno/s2.mp4', '/videos/clients/salteno/s3.mp4', '/videos/clients/salteno/s4.mp4', '/videos/clients/salteno/s5.mp4']
 
+    const pabloFernandezProcess = [
+        {
+            title: 'Edición de 2 Cámaras:',
+            text: 'Realicé una edición fluida utilizando material de dos cámaras, asegurando transiciones suaves y una narrativa visual coherente.'
+        },
+        {
+            title: 'Subtitulado:',
+            text: 'Añadí subtítulos precisos y sincronizados, mejorando la accesibilidad y el alcance del video.'
+        },
+        {
+            title: 'Sincronización de Audio:',
+            text: 'Sincronización meticulosa del audio para garantizar una experiencia auditiva clara y profesional.'
+        },
+        {
+            title: 'Estética Formal y Acorde a la Marca:',
+            text: 'Mantuvimos una estética formal que refleja perfectamente la identidad y los valores de la marca del cliente.'
+        },
+        {
+            title: 'Videos de Stock:',
+            text: 'Incorporé videos de stock seleccionados para enriquecer el contenido visual y apoyar la narrativa del video.'
+        },
+        {
+            title: 'Corrección de Color:',
+            text: 'Aplicación de corrección de color para garantizar una apariencia visual cohesiva y atractiva.'
+        },
+        {
+            title: 'Edición de Videos Cortos:',
+            text: 'Edité cada reel para maximizar el impacto en pocos segundos, manteniendo la narrativa clara y efectiva.'
+        },
+        {
+            title: 'Zooms Dinámicos:',
+            text: 'Implementé zooms estratégicos para enfatizar puntos clave y añadir un toque de dinamismo a los videos.'
+        },
+        {
+            title: 'Transiciones y Cortes:',
+            text: 'Utilicé transiciones suaves y creativas para mantener la fluidez y dinamismo entre los cortes.'
+        },
+    ]
+
     return (
         <section className="relative" id="experienceSection">
 
@@ -85,6 +129,30 @@ export default function experience() {
                                         <a href='https://www.linkedin.com/in/pablo-fernandez-marketingtech/' target='_blank' rel='noreferrer' className="rounded bg-gray-900 text-white py-1 px-2 hover:bg-blue-600">LinkedIn</a>
                                     </div>
                                 </section>
+                                <Accordion className="mt-4 shadow shadow-black" style={{ marginTop: '16px' }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1-content"
+                                        id="panel1-header"
+                                        className="hover:bg-gray-200 flex items-center font-semibold text-md leading-snug tracking-tight"
+                                    >
+                                        Tareas Realizadas
+                                    </AccordionSummary>
+                                    <AccordionDetails className="border-t border-gray-400 text-gray-800" sx={{ p: 2 }}>
+                                        <ul className="list-disc ml-4">
+                                            {
+                                                pabloFernandezProcess &&
+                                                pabloFernandezProcess.map((item, i) => (
+                                                    <li key={i} className="mb-3">
+                                                        <b>{item.title}</b>
+                                                        <br />
+                                                        <p className="ml-2">{item.text}</p>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </AccordionDetails>
+                                </Accordion>
                                 <div className='flex flex-wrap gap-y-8 gap-x-5 justify-center pt-5 md:justify-start'>
                                     {
                                         pabloFernandezVideos &&
@@ -106,6 +174,30 @@ export default function experience() {
                                         <a href='https://www.instagram.com/santi.malano/' target='_blank' rel='noreferrer' className="rounded bg-gray-900 text-white py-1 px-2 hover:bg-blue-600">Instagram</a>
                                     </div>
                                 </section>
+                                <Accordion className="mt-4 shadow shadow-black" style={{ marginTop: '16px' }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1-content"
+                                        id="panel1-header"
+                                        className="hover:bg-gray-200 flex items-center font-semibold text-md leading-snug tracking-tight"
+                                    >
+                                        Tareas Realizadas
+                                    </AccordionSummary>
+                                    <AccordionDetails className="border-t border-gray-400 text-gray-800" sx={{ p: 2 }}>
+                                        <ul className="list-disc ml-4">
+                                            {
+                                                pabloFernandezProcess &&
+                                                pabloFernandezProcess.map((item, i) => (
+                                                    <li key={i} className="mb-3">
+                                                        <b>{item.title}</b>
+                                                        <br />
+                                                        <p className="ml-2">{item.text}</p>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </AccordionDetails>
+                                </Accordion>
                                 <div className='flex flex-wrap gap-y-8 gap-x-5 justify-center pt-5 md:justify-start'>
                                     {
                                         santiMalanoVideos &&
@@ -127,6 +219,30 @@ export default function experience() {
                                         <a href='https://www.tiktok.com/@saltenno' target='_blank' rel='noreferrer' className="rounded bg-gray-900 text-white py-1 px-2 hover:bg-blue-600">Tiktok</a>
                                     </div>
                                 </section>
+                                <Accordion className="mt-4 shadow shadow-black" style={{ marginTop: '16px' }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1-content"
+                                        id="panel1-header"
+                                        className="hover:bg-gray-200 flex items-center font-semibold text-md leading-snug tracking-tight"
+                                    >
+                                        Tareas Realizadas
+                                    </AccordionSummary>
+                                    <AccordionDetails className="border-t border-gray-400 text-gray-800" sx={{ p: 2 }}>
+                                        <ul className="list-disc ml-4">
+                                            {
+                                                pabloFernandezProcess &&
+                                                pabloFernandezProcess.map((item, i) => (
+                                                    <li key={i} className="mb-3">
+                                                        <b>{item.title}</b>
+                                                        <br />
+                                                        <p className="ml-2">{item.text}</p>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </AccordionDetails>
+                                </Accordion>
                                 <div className='flex flex-wrap gap-y-8 gap-x-5 justify-center pt-5 md:justify-start'>
                                     {
                                         saltenoVideos &&

@@ -5,7 +5,7 @@ import ModalVideo from '@/components/modal-video'
 
 export default function Hero() {
 
-  const scrollToSection = (e:any) => {
+  const scrollToSection = (e: any) => {
     const id = e.target.id
     const section = document.getElementById(`${id}Section`);
     if (section) {
@@ -45,15 +45,15 @@ export default function Hero() {
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Francisco <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Ramos</span></h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">"La calidad es el idioma universal que todos aprecian y comprenden."</p>
-              <section className="max-w-xs mx-auto sm:max-w-none flex flex-col gap-3 sm:flex-row sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
+              <section className="max-w-xs mx-auto sm:max-w-none flex flex-col  gap-3 sm:flex-row sm:justify-center sm:items-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
-                  <button className="btn text-white bg-gray-900 hover:bg-blue-600 w-full sm:w-auto" onClick={scrollToSection} id='aboutMe'>Sobre Mi</button>
+                  <button className="btn text-white bg-gray-900 hover:bg-blue-600 w-full sm:w-auto sm:mb-0 sm:ml-4" onClick={scrollToSection} id='aboutMe'>Sobre Mi</button>
+                </div>
+                <div>
+                  <button className="btn py-4 text-white bg-blue-600 hover:bg-gray-900 w-full sm:w-auto sm:ml-4" onClick={scrollToSection} id='contact'>Contactame</button>
                 </div>
                 <div>
                   <button className="btn text-white bg-gray-900 hover:bg-blue-600 w-full sm:w-auto sm:mb-0 sm:ml-4" onClick={scrollToSection} id='experience'>Experiencia</button>
-                </div>
-                <div>
-                  <button className="btn text-white bg-gray-900 hover:bg-blue-600 w-full sm:w-auto sm:ml-4" onClick={scrollToSection} id='contact'>Contactame</button>
                 </div>
               </section>
             </div>

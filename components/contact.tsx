@@ -1,0 +1,29 @@
+import Image from "next/image"
+import mail from '../public/images/mail.png'
+import linkedIn from '../public/images/linkedin.png'
+import instagram from '../public/images/instagram.png'
+
+export default function contact() {
+    return (
+        <section className="relative" id="contactSection">       
+
+            {/* Section header */}
+            <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                <h2 className="h2 mb-4">Contactame</h2>
+                <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            </div>
+
+            <div className="relative text-white flex flex-col sm:flex-wrap sm:flex-row gap-5 justify-center items-center pb-10">
+                <a href="mailto:ramosbusiness56@gmail.com" className="flex gap-2 justify-center items-center text-gray-800 hover:text-gray-900 hover:scale-110 bg-white border hover:bg-white-100 rounded-full shadow shadow-black transition duration-150 ease-in-out p-2" aria-label="Email">
+                    <p>Mail -</p><Image src={mail} alt='mail icon' className='w-6 h-6'></Image>
+                </a>
+                <a href="https://www.linkedin.com/in/franrammos/" target='_blank' className="flex gap-2 justify-center items-center text-gray-800 hover:text-gray-900 hover:scale-110 bg-white border hover:bg-white-100 rounded-full shadow shadow-black transition duration-150 ease-in-out p-2" aria-label="LinkedIn">
+                    <p>LinkedIn -</p><Image src={linkedIn} alt='mail icon' className='w-6 h-6'></Image>
+                </a>
+                <a href="https://www.instagram.com/franrammos_/" target='_blank' className="flex gap-2 justify-center items-center text-gray-800 hover:text-gray-900 hover:scale-110 bg-white border hover:bg-white-100 rounded-full shadow shadow-black transition duration-150 ease-in-out p-2" aria-label="Instagram">
+                    <p>Instagram -</p><Image src={instagram} alt='mail icon' className='w-6 h-6'></Image>
+                </a>
+            </div>
+        </section>
+    )
+}

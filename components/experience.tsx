@@ -42,9 +42,9 @@ export default function experience() {
         }
     }
 
-    const pabloFernandezVideos = ['/videos/clients/pablo_fernandez/pf1.mp4', '/videos/clients/pablo_fernandez/pf2.mp4', '/videos/clients/pablo_fernandez/pf3.mp4', '/videos/clients/pablo_fernandez/pf4.mp4', '/videos/clients/pablo_fernandez/pf5.mp4', '/videos/clients/pablo_fernandez/pf6.mp4']
-    const santiMalanoVideos = ['/videos/clients/santi_malano/sm1.mp4', '/videos/clients/santi_malano/sm2.mp4', '/videos/clients/santi_malano/sm3.mp4', '/videos/clients/santi_malano/sm4.mp4', '/videos/clients/santi_malano/sm5.mp4', '/videos/clients/santi_malano/sm6.mp4']
-    const saltenoVideos = ['/videos/clients/salteno/s1.mp4', '/videos/clients/salteno/s2.mp4', '/videos/clients/salteno/s3.mp4', '/videos/clients/salteno/s4.mp4', '/videos/clients/salteno/s5.mp4', '/videos/clients/salteno/s6.mp4']
+    const pabloFernandezVideos = ['/videos/clients/pablo_fernandez/pf1.mp4', '/videos/clients/pablo_fernandez/pf2.mp4', '/videos/clients/pablo_fernandez/pf3.mp4', '/videos/clients/pablo_fernandez/pf4.mp4', '/videos/clients/pablo_fernandez/pf5.mp4']
+    const santiMalanoVideos = ['/videos/clients/santi_malano/sm1.mp4', '/videos/clients/santi_malano/sm2.mp4', '/videos/clients/santi_malano/sm3.mp4', '/videos/clients/santi_malano/sm4.mp4', '/videos/clients/santi_malano/sm5.mp4']
+    const saltenoVideos = ['/videos/clients/salteno/s1.mp4', '/videos/clients/salteno/s2.mp4', '/videos/clients/salteno/s3.mp4', '/videos/clients/salteno/s4.mp4', '/videos/clients/salteno/s5.mp4']
 
     return (
         <section className="relative" id="experienceSection">

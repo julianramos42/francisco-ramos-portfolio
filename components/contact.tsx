@@ -10,7 +10,8 @@ export default function contact() {
             {/* Section header */}
             <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
                 <h2 className="h2 mb-4">Contactame</h2>
-                <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+                <p className="text-xl text-gray-600">Estoy siempre en busca de nuevos desafíos y oportunidades para colaborar en proyectos innovadores.</p>
+                <p className="text-xl text-gray-600">Si necesitas un profesional comprometido y creativo, no dudes en contactarme.</p>
             </div>
 
             <div className="relative text-white flex flex-col sm:flex-wrap sm:flex-row gap-5 justify-center items-center pb-10">

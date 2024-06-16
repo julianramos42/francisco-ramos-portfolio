@@ -90,6 +90,48 @@ export default function experience() {
         },
     ]
 
+    const santiMalanoProcess = [
+        {
+            title: 'Edición dinámica:',
+            text: 'Edité cada reel para maximizar el impacto en pocos segundos, manteniendo el mensaje del video claro.',
+        },
+        {
+            title: 'Zooms Dinámicos:',
+            text: 'Implementé zooms estratégicos para enfatizar puntos clave y añadir un toque de dinamismo a los videos.',
+        },
+        {
+            title: 'Transiciones y Cortes:',
+            text: 'Utilicé transiciones suaves y creativas para mantener la fluidez y dinamismo entre los cortes.',
+        },
+        {
+            title: 'Subtitulado:',
+            text: 'Añadí subtítulos precisos y sincronizados, mejorando la accesibilidad y el alcance del video.',
+        },
+        {
+            title: 'Sincronización de Audio:',
+            text: 'Sincronización meticulosa del audio para garantizar una experiencia auditiva clara y profesional.',
+        },
+    ]
+
+    const saltenoProcess = [
+        {
+            title: 'Edición dinámica:',
+            text: 'Edité cada reel para maximizar el impacto en pocos segundos.'
+        },
+        {
+            title: 'Highlights:',
+            text: 'Recopile los mejores momentos de su stream y jugadas en videojuegos.'
+        },
+        {
+            title: 'Transiciones y Cortes:',
+            text: 'Utilicé transiciones suaves y creativas para mantener la fluidez y dinamismo entre los cortes.'
+        },
+        {
+            title: 'Zooms Dinámicos:',
+            text: 'Implementé zooms estratégicos para enfatizar puntos clave y añadir un toque de dinamismo a los videos.'
+        },
+    ]
+
     return (
         <section className="relative" id="experienceSection">
 
@@ -136,7 +178,7 @@ export default function experience() {
                                         id="panel1-header"
                                         className="hover:bg-gray-200 flex items-center font-semibold text-md leading-snug tracking-tight"
                                     >
-                                        Tareas Realizadas
+                                        Más Información
                                     </AccordionSummary>
                                     <AccordionDetails className="border-t border-gray-400 text-gray-800" sx={{ p: 2 }}>
                                         <ul className="list-disc ml-4">
@@ -181,13 +223,13 @@ export default function experience() {
                                         id="panel1-header"
                                         className="hover:bg-gray-200 flex items-center font-semibold text-md leading-snug tracking-tight"
                                     >
-                                        Tareas Realizadas
+                                        Más Información
                                     </AccordionSummary>
                                     <AccordionDetails className="border-t border-gray-400 text-gray-800" sx={{ p: 2 }}>
                                         <ul className="list-disc ml-4">
                                             {
-                                                pabloFernandezProcess &&
-                                                pabloFernandezProcess.map((item, i) => (
+                                                santiMalanoProcess &&
+                                                santiMalanoProcess.map((item, i) => (
                                                     <li key={i} className="mb-3">
                                                         <b>{item.title}</b>
                                                         <br />
@@ -226,13 +268,13 @@ export default function experience() {
                                         id="panel1-header"
                                         className="hover:bg-gray-200 flex items-center font-semibold text-md leading-snug tracking-tight"
                                     >
-                                        Tareas Realizadas
+                                        Más Información
                                     </AccordionSummary>
                                     <AccordionDetails className="border-t border-gray-400 text-gray-800" sx={{ p: 2 }}>
                                         <ul className="list-disc ml-4">
                                             {
-                                                pabloFernandezProcess &&
-                                                pabloFernandezProcess.map((item, i) => (
+                                                saltenoProcess &&
+                                                saltenoProcess.map((item, i) => (
                                                     <li key={i} className="mb-3">
                                                         <b>{item.title}</b>
                                                         <br />

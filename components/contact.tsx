@@ -1,7 +1,7 @@
 import Image from "next/image"
-import mail from '../public/images/mail.png'
-import linkedIn from '../public/images/linkedin.png'
-import instagram from '../public/images/instagram.png'
+import mail from '../public/images/mail.webp'
+import linkedIn from '../public/images/linkedin.webp'
+import instagram from '../public/images/instagram.webp'
 
 export default function contact() {
     return (

@@ -47,9 +47,9 @@ export default function experience() {
         }
     }
 
-    const pabloFernandezVideos = ['/videos/clients/pablo_fernandez/pf1.mp4', '/videos/clients/pablo_fernandez/pf2.mp4', '/videos/clients/pablo_fernandez/pf3.mp4', '/videos/clients/pablo_fernandez/pf4.mp4', '/videos/clients/pablo_fernandez/pf5.mp4']
-    const santiMalanoVideos = ['/videos/clients/santi_malano/sm1.mp4', '/videos/clients/santi_malano/sm2.mp4', '/videos/clients/santi_malano/sm3.mp4', '/videos/clients/santi_malano/sm4.mp4', '/videos/clients/santi_malano/sm5.mp4']
-    const saltenoVideos = ['/videos/clients/salteno/s1.mp4', '/videos/clients/salteno/s2.mp4', '/videos/clients/salteno/s3.mp4', '/videos/clients/salteno/s4.mp4', '/videos/clients/salteno/s5.mp4']
+    const pabloFernandezVideos = ['/videos/clients/pablo_fernandez/pf1.webm', '/videos/clients/pablo_fernandez/pf2.webm', '/videos/clients/pablo_fernandez/pf3.webm', '/videos/clients/pablo_fernandez/pf4.webm', '/videos/clients/pablo_fernandez/pf5.webm']
+    const santiMalanoVideos = ['/videos/clients/santi_malano/sm1.webm', '/videos/clients/santi_malano/sm2.webm', '/videos/clients/santi_malano/sm3.webm', '/videos/clients/santi_malano/sm4.webm', '/videos/clients/santi_malano/sm5.webm']
+    const saltenoVideos = ['/videos/clients/salteno/s1.webm', '/videos/clients/salteno/s2.webm', '/videos/clients/salteno/s3.webm', '/videos/clients/salteno/s4.webm', '/videos/clients/salteno/s5.webm']
 
     const pabloFernandezProcess = [
         {

@@ -64,11 +64,10 @@ export default function Hero() {
             thumb={VideoThumb}
             thumbWidth={768}
             thumbHeight={432}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
+            thumbAlt="Modal video"
+            video="/videos/Presentacion.webm"
             videoWidth={1920}
             videoHeight={1080} />
-
         </div>
 
       </div>

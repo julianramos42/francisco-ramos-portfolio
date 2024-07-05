@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import Accordion from '@mui/material/Accordion';
 import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import useIntersectionObserver from './useIntersectionObserver'
 import pabloFernandezFoto from '@/public/images/clients/Pablo.webp'
 //
 import santiMalanoFoto from '@/public/images/clients/Santi_Malano.webp'
@@ -15,6 +16,26 @@ import saltenoFoto from '@/public/images/clients/salteno.webp'
 //
 import norteVerdeFoto from '@/public/images/clients/Norte_Verde.png'
 
+const LazyVideo = ({ src }) => {
+    const [ref, isIntersecting] = useIntersectionObserver({
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    });
+    const [hasRendered, setHasRendered] = useState(false);
+
+    useEffect(() => {
+        if (isIntersecting && !hasRendered) {
+            setHasRendered(true);
+        }
+    }, [isIntersecting, hasRendered]);
+
+    return (
+        <div ref={ref} style={{ width: '200px', height: '354px' }}>
+            {hasRendered && <video src={src} controls preload='metadata' muted width='200px' height='220px' className="border rounded border-black" data-aos='fade-right'></video>}
+        </div>
+    );
+};
 export default function experience() {
     const [clientState, setClientState] = useState('pabloFernandez')
     const clientsImages = [
@@ -224,7 +245,7 @@ export default function experience() {
                                     {
                                         pabloFernandezVideos &&
                                         pabloFernandezVideos.map((pabloFernandezVideo, i) => (
-                                            <video src={pabloFernandezVideo} controls preload='metadatos' muted key={i} width={'200px'} height={'220px'} className="rounded border-black" data-aos='fade-right'></video>
+                                            <LazyVideo key={i} src={pabloFernandezVideo} />
                                         ))
                                     }
                                 </div>
@@ -269,7 +290,7 @@ export default function experience() {
                                     {
                                         santiMalanoVideos &&
                                         santiMalanoVideos.map((santiMalanoVideo, i) => (
-                                            <video src={santiMalanoVideo} controls preload='metadatos' muted key={i} width={'200px'} height={'220px'} className="rounded border-black" data-aos='fade-right'></video>
+                                            <LazyVideo key={i} src={santiMalanoVideo} />
                                         ))
                                     }
                                 </div>
@@ -314,7 +335,7 @@ export default function experience() {
                                     {
                                         saltenoVideos &&
                                         saltenoVideos.map((saltenoVideo, i) => (
-                                            <video src={saltenoVideo} controls preload='metadatos' muted key={i} width={'200px'} height={'220px'} className="rounded border-black" data-aos='fade-right'></video>
+                                            <LazyVideo key={i} src={saltenoVideo} />
                                         ))
                                     }
                                 </div>
@@ -360,7 +381,7 @@ export default function experience() {
                                     {
                                         norteVerdeVideos &&
                                         norteVerdeVideos.map((norteVerdeVideo, i) => (
-                                            <video src={norteVerdeVideo} controls preload='metadatos' muted key={i} width={'200px'} height={'220px'} className="border rounded border-black" data-aos='fade-right'></video>
+                                            <LazyVideo key={i} src={norteVerdeVideo} />
                                         ))
                                     }
                                 </div>

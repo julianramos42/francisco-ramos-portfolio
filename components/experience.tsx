@@ -12,6 +12,8 @@ import pabloFernandezFoto from '@/public/images/clients/Pablo.webp'
 import santiMalanoFoto from '@/public/images/clients/Santi_Malano.webp'
 //
 import saltenoFoto from '@/public/images/clients/salteno.webp'
+//
+import norteVerdeFoto from '@/public/images/clients/Norte_Verde.png'
 
 export default function experience() {
     const [clientState, setClientState] = useState('pabloFernandez')
@@ -28,6 +30,10 @@ export default function experience() {
             src: saltenoFoto,
             id: 'salteno'
         },
+        {
+            src: norteVerdeFoto,
+            id: 'norteVerde'
+        },
     ]
 
     function changeCliente(e: any) {
@@ -42,14 +48,18 @@ export default function experience() {
             case 'salteno':
                 setClientState('salteno')
                 break;
+            case 'norteVerde':
+                setClientState('norteVerde')
+                break;
             default:
                 break;
         }
     }
 
-    const pabloFernandezVideos = ['/videos/clients/pablo_fernandez/pf1.webm', '/videos/clients/pablo_fernandez/pf2.webm', '/videos/clients/pablo_fernandez/pf3.webm', '/videos/clients/pablo_fernandez/pf4.webm', '/videos/clients/pablo_fernandez/pf5.webm']
-    const santiMalanoVideos = ['/videos/clients/santi_malano/sm1.webm', '/videos/clients/santi_malano/sm2.webm', '/videos/clients/santi_malano/sm3.webm', '/videos/clients/santi_malano/sm4.webm', '/videos/clients/santi_malano/sm5.webm']
-    const saltenoVideos = ['/videos/clients/salteno/s1.webm', '/videos/clients/salteno/s2.webm', '/videos/clients/salteno/s3.webm', '/videos/clients/salteno/s4.webm', '/videos/clients/salteno/s5.webm']
+    const pabloFernandezVideos = ['/videos/clients/pablo_fernandez/pf1.webm', '/videos/clients/pablo_fernandez/pf2.webm', '/videos/clients/pablo_fernandez/pf3.webm', '/videos/clients/pablo_fernandez/pf4.webm', '/videos/clients/pablo_fernandez/pf5.webm', '/videos/clients/pablo_fernandez/pf6.mp4', '/videos/clients/pablo_fernandez/pf7.mp4', '/videos/clients/pablo_fernandez/pf8.mp4', '/videos/clients/pablo_fernandez/pf9.mp4', '/videos/clients/pablo_fernandez/pf10.mp4', '/videos/clients/pablo_fernandez/pf11.mp4']
+    const santiMalanoVideos = ['/videos/clients/santi_malano/sm1.webm', '/videos/clients/santi_malano/sm2.webm', '/videos/clients/santi_malano/sm3.webm', '/videos/clients/santi_malano/sm4.webm', '/videos/clients/santi_malano/sm5.webm', '/videos/clients/santi_malano/sm6.mp4', '/videos/clients/santi_malano/sm7.mp4', '/videos/clients/santi_malano/sm8.mp4', '/videos/clients/santi_malano/sm9.mp4', '/videos/clients/santi_malano/sm10.mp4', '/videos/clients/santi_malano/sm11.mp4', '/videos/clients/santi_malano/sm12.mp4', '/videos/clients/santi_malano/sm13.mp4', '/videos/clients/santi_malano/sm14.mp4', '/videos/clients/santi_malano/sm15.mp4', '/videos/clients/santi_malano/sm16.mp4', '/videos/clients/santi_malano/sm17.mp4', '/videos/clients/santi_malano/sm18.mp4', '/videos/clients/santi_malano/sm19.mp4', '/videos/clients/santi_malano/sm20.mp4', '/videos/clients/santi_malano/sm21.mp4', '/videos/clients/santi_malano/sm22.mp4', '/videos/clients/santi_malano/sm23.mp4', '/videos/clients/santi_malano/sm24.mp4', '/videos/clients/santi_malano/sm25.mp4', '/videos/clients/santi_malano/sm26.mp4', '/videos/clients/santi_malano/sm27.mp4', '/videos/clients/santi_malano/sm28.mp4', '/videos/clients/santi_malano/sm29.mp4', '/videos/clients/santi_malano/sm30.mp4', '/videos/clients/santi_malano/sm31.mp4']
+    const saltenoVideos = ['/videos/clients/salteno/s1.webm', '/videos/clients/salteno/s2.webm', '/videos/clients/salteno/s3.webm', '/videos/clients/salteno/s4.webm', '/videos/clients/salteno/s5.webm', '/videos/clients/salteno/s6.mp4', '/videos/clients/salteno/s7.mp4']
+    const norteVerdeVideos = ['/videos/clients/norte_verde/nv1.mp4', '/videos/clients/norte_verde/nv2.mp4', '/videos/clients/norte_verde/nv3.mp4', '/videos/clients/norte_verde/nv4.mp4', '/videos/clients/norte_verde/nv5.mp4', '/videos/clients/norte_verde/nv6.mp4', '/videos/clients/norte_verde/nv7.mp4', '/videos/clients/norte_verde/nv8.mp4', '/videos/clients/norte_verde/nv9.mp4']
 
     const pabloFernandezProcess = [
         {
@@ -130,6 +140,21 @@ export default function experience() {
             title: 'Zooms Dinámicos:',
             text: 'Implementé zooms estratégicos para enfatizar puntos clave y añadir un toque de dinamismo a los videos.'
         },
+    ]
+
+    const norteVerdeProcess = [
+        {
+            title: 'Croquis a Mano Alzada:',
+            text: 'Dibujé a mano alzada los edificios solicitados, capturando su esencia arquitectónica en un estilo croquis detallado.'
+        },
+        {
+            title: 'División en Capas:',
+            text: 'Utilicé Photoshop para dividir cada dibujo en múltiples capas, preparando los elementos para una animación dinámica y fluida.'
+        },
+        {
+            title: 'Animación en Adobe Premiere Pro:',
+            text: 'Animé los croquis en Adobe Premiere Pro, creando secuencias visuales impactantes que muestran la evolución de cada edificio desde el papel hasta la realidad digital.'
+        }
     ]
 
     return (
@@ -290,6 +315,52 @@ export default function experience() {
                                         saltenoVideos &&
                                         saltenoVideos.map((saltenoVideo, i) => (
                                             <video src={saltenoVideo} controls preload='metadatos' muted key={i} width={'200px'} height={'220px'} className="rounded border-black" data-aos='fade-right'></video>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                        }
+                        {
+                            clientState === 'norteVerde' &&
+                            <div>
+                                <section className="flex flex-col gap-2">
+                                    <h3 className="font-bold text-xl leading-snug tracking-tight mb-1">Norte Verde</h3>
+                                    {/* <p className="text-gray-700"></p> */}
+                                    <div className='flex gap-3'>
+                                        <a href='https://norte-verde.cl/' target='_blank' rel='noreferrer' className='rounded bg-gray-900 text-white py-1 px-2 hover:bg-blue-600'>Web</a>
+                                        <a href='https://www.instagram.com/inorteverde/' target='_blank' rel='noreferrer' className="rounded bg-gray-900 text-white py-1 px-2 hover:bg-blue-600">Instagram</a>
+                                        <a href='https://www.linkedin.com/company/norte-verde/' target='_blank' rel='noreferrer' className="rounded bg-gray-900 text-white py-1 px-2 hover:bg-blue-600">LinkedIn</a>
+                                    </div>
+                                </section>
+                                <Accordion className="mt-4 shadow shadow-black" style={{ marginTop: '16px' }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1-content"
+                                        id="panel1-header"
+                                        className="hover:bg-gray-200 flex items-center font-semibold text-md leading-snug tracking-tight"
+                                    >
+                                        Más Información
+                                    </AccordionSummary>
+                                    <AccordionDetails className="border-t border-gray-400 text-gray-800" sx={{ p: 2 }}>
+                                        <ul className="list-disc ml-4">
+                                            {
+                                                norteVerdeProcess &&
+                                                norteVerdeProcess.map((item, i) => (
+                                                    <li key={i} className="mb-3">
+                                                        <b>{item.title}</b>
+                                                        <br />
+                                                        <p className="ml-2">{item.text}</p>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <div className='flex flex-wrap gap-y-8 gap-x-5 justify-center pt-5 md:justify-start'>
+                                    {
+                                        norteVerdeVideos &&
+                                        norteVerdeVideos.map((norteVerdeVideo, i) => (
+                                            <video src={norteVerdeVideo} controls preload='metadatos' muted key={i} width={'200px'} height={'220px'} className="border rounded border-black" data-aos='fade-right'></video>
                                         ))
                                     }
                                 </div>

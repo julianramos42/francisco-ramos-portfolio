@@ -16,7 +16,7 @@ import saltenoFoto from '@/public/images/clients/salteno.webp'
 //
 import norteVerdeFoto from '@/public/images/clients/Norte_Verde.png'
 
-const LazyVideo = ({ src }) => {
+const LazyVideo = ({ src } :any) => {
     const [ref, isIntersecting] = useIntersectionObserver({
         root: null,
         rootMargin: '0px',
